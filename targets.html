@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>WakeUp System Signal</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">WakeUp System</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="requirements.html">Requirements</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="architecture.html">Architecture</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="triggers.html">Triggers</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="targets.html">Targets</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="evaluation.html">Evaluation</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="team.html">Team</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="partners.html">Partners</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('assets/img/about-bg.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="page-heading">
+                            <h1>Targets</h1>
+                            <span class="subheading">The WakeUp System's Targets.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <main class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10"><p>Once a trigger sends a singal, the WakeUp system will map the correct target device to that trigger. The target devices utilised include the Home Assistant API to connect Matter devices, WakeOnLAN to wake up displays, and the Telegram API sends alerts on a registered mobile device.</p></div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-header">Home Assistant API</div>
+                            <div class="card-body text-center">
+                                <img class="mb-3" src="assets/Home_Assistant_logo.jpg" alt="Home Assistant API" width="50%" />
+                                <br />
+                                This API allows us to control Matter devices within the local network.
+                                <br />
+                                To interact with Matter devices, the Home Assistant integration utilises its "Matter controller". Operating separately, Matter server add-ons enable the functioning of the controller software, creating a link between the Matter network and Home Assistant. Communication between Home Assistant Matter integration and the server occurs through a WebSocket.
+                                <br />
+                                The Matter devices our team uses include smart devices such as lights and smart plugs. Based on the trigger that the patient has requested, the WakeUp System will map the relevant target device to it. Additionally, media players are another target device.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-header">WakeOnLAN</div>
+                            <div class="card-body text-center">
+                                <img class="mb-3" src="assets/wakeonlan.jpg" alt="WakeOnLAN" width="50%" />
+                                <br />
+                                This has been developed to allow patients to power on TVs or other computer stations on the network using a Python package. The target device must be be in a low-power state (sleeping). The target device will be waiting for a specific “Magic Packet” to be sent. This packet is then transmitted to the broadcast address of the local network. Upon receiving the packet, the target device will validate it and wake up if the packet contains all the accurate information, including the MAC address and IPv4 address.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-header">Telegram API Bot</div>
+                            <div class="card-body text-center">
+                                <img class="mb-3" src="assets/telegram.jpg" alt="Telegram API Bot" width="80%" />
+                                <br />
+                                This is a custom bot used to communicate on alerts. Once activated, the bot will send alerts every 5 seconds to the user, and it will continue to run until the user stops it from the message channel.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="https://github.com/orgs/SSE-GROUP5/repositories" target="_blank">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="small text-center text-muted fst-italic">UCL MSc Software Engineering - WakeUp System Signal 2024</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

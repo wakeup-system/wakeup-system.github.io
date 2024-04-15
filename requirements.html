@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>WakeUp System Signal</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">WakeUp System</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="requirements.html">Requirements</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="architecture.html">Architecture</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="triggers.html">Triggers</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="targets.html">Targets</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="evaluation.html">Evaluation</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="team.html">Team</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="partners.html">Partners</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('assets/img/about-bg.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="page-heading">
+                            <h1>Requirements</h1>
+                            <span class="subheading">The WakeUp System's Requirements.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <main class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10">
+                        <p>This page outlines the essential functional and non-functional requirements crucial for the development, implementation, evaluation, and long-term sustainability of the Wakeup System.</p>
+                        <p>Functional Requirements</p>
+                        <ul>
+                            <li>Patient Monitoring and Intraction via Triggers - The system should be able to monitor patients through a computer vision algorithm to interpret the patient's body/face movements and a sound/voice detection algorithm to recognise patterns created by the patient through various forms (e.g.: mouth noises, eye blinking, etc.). This requirement will allow patients with disabilities to interact with smart devices in the easiest way possible.</li>
+                            <li>Ease of System Interaction - It is important that the patients can initiate an interaction with the system easily and be reminded consistently that the system exists for interacting with smart home devices around them.</li>
+                            <li>Graphical User Interface for Medical Staff - The GUI should allow the medical staff or patients to easily configure custom commands for the triggers, as well as mapping the triggers to target devices, enabling them to use the system in the simplest way possible.</li>
+                            <li>Usage Tracking and Engagement Insights - The system should be able track its usage over time. The Medical staff will have the ability to assess the patient’s interaction with the system. This information will help determine the frequency and preference for its use, providing valuable insights into the patient’s engagement with the system.</li>
+                        </ul>
+                        <p>Non-Functional Requirements</p>
+                        <ul>
+                            <li>Response time - The system should provide immediate feedback to patient interactions, with a maximum response time of 2 seconds for trigger detection and initiating actions on target devices. Quick response times are critical in healthcare settings, especially in emergency situations or for patients with disabilities, to reduce discomfort and potential harm.</li>
+                            <li>Scalability - The system should be easily scalable to support an increasing number of triggers and targets without significant performance decrease. Importantly, adding new triggers and targets should be managed easily without the need for complex configurations. Since this project aims to lay the foundation of a project continued by other teams in the future, it is important that the system is modular, easy to maintain and extendable.</li>
+                            <li>Security - We plan to ensure that the security of the system is designed to protect patient confidentiality rigorously, limiting the use of patient data to only name and patient ID in compliance with healthcare regulations. This approach minimises the risk of data breaches while ensuring the system adheres to privacy standards.</li>
+                            <li>Ease of installation - The installation process should be streamlined for efficiency, with each trigger being managed through executable files. This design choice simplifies the setup process, enabling medical staff to easily integrate new components into the system without complex configurations, facilitating rapid deployment in a healthcare environment.</li>
+                            <li>Integration with existing healthcare systems and standards - The system should be designed to integrate seamlessly with existing healthcare systems and standards, such as FHIR (Fast Healthcare Interoperability Resources) for data exchange (e.g., statistical usage data of the system).</li>
+                            <li>Open Source Project - The software should be an open source project to ensure continued accessibility for future students or developers who may need access to the source code for future projects.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="https://github.com/orgs/SSE-GROUP5/repositories" target="_blank">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="small text-center text-muted fst-italic">UCL MSc Software Engineering - WakeUp System Signal 2024</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
